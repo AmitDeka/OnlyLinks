@@ -65,7 +65,7 @@ export default function Navbar() {
           </div>
         </div>
         <div className="navbar-center md:flex-1">
-          <a className="btn btn-ghost text-2xl logoText" href="/">
+          <a className="btn btn-ghost logoText text-2xl" href="/">
             OnlyLinks
           </a>
         </div>
