@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Mulish } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning={true} data-theme="lightTheme">
       <body className={`${mulish.variable}`} suppressHydrationWarning={true}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
