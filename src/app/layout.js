@@ -1,6 +1,5 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Mulish } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const mulish = Mulish({

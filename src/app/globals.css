@@ -22,6 +22,11 @@
 :root {
   --border-color-light: #e5e7eb;
   --border-color-dark: #2e2e2f;
+  --facebok-color: 66, 103, 178;
+  --x-color: 29, 161, 242;
+  --google-color: 15, 157, 88;
+  --apple-color: 0, 0, 0;
+  --github-color: 52, 52, 52;
 }
 
 .logoText {
@@ -30,14 +35,12 @@
 
 .border-color {
   border-color: var(--border-color-dark);
-}
-
-[data-theme="lightTheme"] .border-color {
-  border-color: var(--border-color-light);
-}
-
-[data-theme="darkTheme"] .border-color {
-  border-color: var(--border-color-dark);
+  [data-theme="lightTheme"] & {
+    border-color: var(--border-color-light);
+  }
+  [data-theme="darkTheme"] & {
+    border-color: var(--border-color-dark);
+  }
 }
 
 .shape-divider-bottom {
@@ -57,15 +60,13 @@
   & .shape-fill {
     fill: #f4fbf4;
   }
-}
-
-[data-theme="darkTheme"] .shape-divider-bottom .shape-fill {
-  fill: #011203;
-}
-
-[data-theme="darkTheme"] .shape-divider-bottom .shape-fill {
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), #e6e6e8;
+  [data-theme="darkTheme"] & .shape-fill {
+    fill: #011203;
+  }
+  [data-theme="darkTheme"] & .shape-fill {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), #e6e6e8;
+  }
 }
 
 .heroBG {
@@ -76,10 +77,9 @@
   margin-top: -1.5rem;
   position: relative;
   width: 100%;
-}
-
-[data-theme="darkTheme"] .heroBG {
-  background-image: url("/images/bg/darkBG.png");
+  [data-theme="darkTheme"] & {
+    background-image: url("/images/bg/darkBG.png");
+  }
 }
 
 .box-shadow {
@@ -88,16 +88,15 @@
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
       rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    /* box-shadow: #000033 0px 60px 40px -7px; */
   }
-}
 
-[data-theme="darkTheme"] .box-shadow {
-  box-shadow: rgba(255, 255, 255, 0.15) 0px 10px 15px -3px,
-    rgba(255, 255, 255, 0.055) 0px 4px 6px -2px;
-  &:hover {
-    box-shadow: rgba(255, 255, 255, 0.15) 0px 20px 25px -5px,
-      rgba(255, 255, 255, 0.045) 0px 10px 10px -5px;
+  [data-theme="darkTheme"] & {
+    box-shadow: rgba(255, 255, 255, 0.15) 0px 10px 15px -3px,
+      rgba(255, 255, 255, 0.055) 0px 4px 6px -2px;
+    &:hover {
+      box-shadow: rgba(255, 255, 255, 0.15) 0px 20px 25px -5px,
+        rgba(255, 255, 255, 0.045) 0px 10px 10px -5px;
+    }
   }
 }
 
@@ -110,4 +109,35 @@
 
 .btn-custom {
   @apply min-h-10 rounded-3xl w-36 h-10 text-base text-white;
+}
+
+.brand {
+  &.btn-facebook {
+    background-color: rgba(var(--facebok-color), 1);
+    border-color: rgba(var(--facebok-color), 1);
+  }
+
+  &.btn-x {
+    background-color: rgba(var(--x-color), 1);
+    border-color: rgba(var(--x-color), 1);
+  }
+
+  &.btn-github {
+    background-color: rgba(var(--github-color), 1);
+    border-color: rgba(var(--github-color), 1);
+  }
+
+  &.btn-google {
+    background-color: rgba(var(--google-color), 1);
+    border-color: rgba(var(--google-color), 1);
+  }
+
+  &.btn-apple {
+    background-color: rgba(var(--apple-color), 1);
+    border-color: rgba(var(--apple-color), 1);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

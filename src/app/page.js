@@ -1,8 +1,6 @@
+import HeroUsername from "@/components/heroUsername";
+import Navbar from "@/components/navbar";
 import Image from "next/image";
-import Darkmode from "./components/darkmode";
-import HeroUsername from "./components/heroUsername";
-import Navbar from "./components/navbar";
-// import ScriptFTR from "./components/script";
 
 export const metadata = {
   title: "Home",
@@ -20,7 +18,6 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-
       <section className="hero h-[950px] lg:h-[800px] heroBG">
         <div className="hero-content text-dark text-center">
           <div className="max-w-xl -mt-[250px] lg:-mt-[150px]">
@@ -54,7 +51,7 @@ export default function Home() {
             src="/images/product_desktop.jpg"
             alt="Product Image Desktop and Tablet"
             priority={false}
-            quality={85}
+            quality={70}
             width={1600}
             height={900}
             style={heroImageStyle}
@@ -72,7 +69,6 @@ export default function Home() {
           />
         </div>
       </div>
-
       <section className="mt-[650px]">
         <div className="container mx-auto">
           <h1 className="md:text-4xl lg:text-5xl mb-8 text-3xl font-bold text-center">
